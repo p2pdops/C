@@ -6,6 +6,8 @@ int main()
 
 	float t1,t2;
 
+	printf("Enter your input : ");
+
 	scanf("%d %d", &n1 , &n2);
 
 	t1 = n1++;

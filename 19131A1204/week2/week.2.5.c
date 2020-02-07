@@ -34,8 +34,8 @@ int main()
 
 	// Bitwise operations
 	a = a ^ b;
-    b = a ^ b;
-    a = a ^ b;
+   	b = a ^ b;
+    	a = a ^ b;
 
 	printf("The Values before swapping are %d %d \n", p, q);
 	printf("The Values after  swapping are %d %d \n", a, b);

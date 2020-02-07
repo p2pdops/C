@@ -2,24 +2,19 @@
 
 int main()
 {
+	int n1,n2;
 
-	int a;
-	printf("Enter your integer : ");
-	scanf("%d", &a);
-	printf("%d\n", a);
-	printf("%d\n", &a);
+	float t1,t2;
 
-	float b;
-	printf("Enter your float : ");
-	scanf("%f", &b);
-	printf("%.2f\n", b);
-	printf("%d\n", &b);
+	scanf("%d %d", &n1 , &n2);
 
-	char c;
-	printf("Enter your char : ");
-	scanf(" %c", &c);
-	printf("%c\n", c);
-	printf("%d\n", &c);
+	t1 = n1++;
+
+	t2 = ++n2;
+
+	printf("After Post increment 1st Value (%d) is %f \n", n1, t1);
+
+	printf("After Pre increment 2nd Value (%d) is %f \n", n2, t2);
 
 	return 0;
 }

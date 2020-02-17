@@ -9,7 +9,7 @@ int main()
 	scanf("%d", &size);
 
 	
-	for (int i=size; i > 0; i-- )
+	for (int i = size; i > 0; i-- )
 	{
 
 		for(int k = 0; k < size - i; k++ ) printf(" ");

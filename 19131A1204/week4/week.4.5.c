@@ -11,10 +11,10 @@ int main()
 	
 	for (int i=size; i > 0; i-- )
 	{
-		
+
 		for(int k = 0; k < size - i; k++ ) printf(" ");
 
-		for(int j = i; j > 0; j-- )	printf("%d ", j);
+		for(int j = i; j > 0; j-- ) printf("%d ", j);
 
 		printf("\n");
 

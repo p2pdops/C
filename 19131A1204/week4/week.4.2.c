@@ -3,24 +3,23 @@
 int main()
 {
 	
-	char ch;
+	int num, i, count;
 
-	printf("Enter your char : ");
-	scanf("%c", &ch);
+	printf("Enter your number : ");
 
-	if (('a'<=ch && ch <= 'z') || ('A'<=ch && ch <= 'Z') ) 
-	{
-		if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
-			ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
-			printf("'%c' is a vowel.", ch);
-		else 
-			printf("'%c' is a Consonant.", ch);
-	} 
-	else
-	if ( '0' <= ch && ch <= '9' )
-		 printf("'%c' is a digit.", ch);	
-	else printf("'%c' is a special character.", ch);
+	scanf("%d", &num);
 
+	count = 0;
+
+	for (i = 1; i < num + 1; i++) {
+		if (num % i == 0) {
+			printf("%d is factor of %d\n", i, num);
+			count += 1;
+		} 
+	}
+
+	if (count == 2) printf("%d is a prime number.\n", num);
+	else printf("%d has %d factors.\n", num, count);
 	printf("\n");
 	return 0;
 }

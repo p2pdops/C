@@ -2,17 +2,24 @@
 
 int main()
 {
-	char ch;
+	int size;
 
-	printf("Enter your char : ");
+	printf("Enter your size : ");
 
-	scanf("%c", &ch);
+	scanf("%d", &size);
 
-	if ( 'A' <= ch && ch <= 'Z' ) printf("%c is uppercase, it's lowercase is %c", ch, ch + 32);
-	else if ( 'a' <= ch && ch <= 'z' ) printf("%c is lowercase, it's uppercase is %c", ch, ch - 32);
-	else
-		printf("Not an alphabet!!!");
 	
+	for (int i=size; i > 0; i-- )
+	{
+		
+		for(int k = 0; k < size - i; k++ ) printf(" ");
+
+		for(int j = i; j > 0; j-- )	printf("%d ", j);
+
+		printf("\n");
+
+	}
+
 	printf("\n");
 
 	return 0;

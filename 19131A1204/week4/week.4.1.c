@@ -2,18 +2,18 @@
 
 int main()
 {
-	int n1,n2, num;
+	int n1,n2, i;
 	
 	printf("Enter your input : ");
 
-	scanf("%d %d %d", &n1 , &n2, &num);
+	scanf("%d %d", &n1 , &n2);
 
-	if ( n1 < num && num < n2 || n1 > num && num > n2 )
-	 //printf("%d is between %d & %d\n", num, n1 ,n2);
-	 printf("Key value is between the limits\n", num, n1 ,n2);
-	else
-	 printf("Key value is not between the limits\n", num, n1 ,n2);
-	 //printf("%d is not between %d & %d\n", num, n1 ,n2);
+
+	printf("The odd numbers between %d & %d : \n", n1,n2);
+	for (i= n1; i< n2; i++) 
+	{
+		if(i%2 == 1) printf("%d\n", i);
+	}
 
 	printf("\n");
 	

@@ -4,7 +4,7 @@ int main()
 {
 	int size;
 
-	printf("Enter your size : ");
+	printf("Enter your pyramid size : ");
 
 	scanf("%d", &size);
 

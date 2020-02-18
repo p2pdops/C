@@ -3,7 +3,7 @@
 int main()
 {
 
-	// incomplete problem statement (retun in functions)
+	// incomplete problem statement (return in functions)
 
 	return 0;
 }

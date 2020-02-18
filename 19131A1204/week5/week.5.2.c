@@ -1,25 +1,66 @@
 #include <stdio.h>
 
+int calcLcm(int a, int b);
+int calcGcd(int a, int b);
+
 int main()
 {
 	
-	int num, i, count;
+	int n1, n2;
 
-	printf("Enter your number : ");
+	printf("Enter your 2 numbers : ");
 
-	scanf("%d", &num);
+	scanf("%d %d", &n1, &n2);
 
-	count = 0;
 
-	for (i = 1; i < num + 1; i++) {
-		if (num % i == 0) {
-			printf("%d is factor of %d\n", i, num);
-			count += 1;
-		} 
-	}
+	
+	// using lcm = n1*n2/gcd
 
-	if (count == 2) printf("%d is a prime number.\n", num);
-	else printf("%d has %d factors.\n", num, count);
+
+
+	int gcd = calcGcd(n1,n2);	
+
+	printf("The GCD of %d,%d is %d\n", n1, n2, gcd);
+
+	int lcm = calcLcm(n1,n2);
+	printf("The LCM of %d,%d (directly) is %d\n", n1, n2, lcm);
+
+	lcm = (n1 * n2) / gcd;
+
+	printf("The LCM of %d,%d (using GCD) is %d\n", n1, n2, lcm);
+
 	printf("\n");
 	return 0;
+}
+
+int calcLcm(int a, int b) {
+
+	int	multiple = (a > b) ? a : b;
+
+	while(1) {
+		if(multiple % a == 0 && multiple % b == 0)
+		 break;
+		multiple++;	
+	}
+
+	return multiple;
+}
+
+int calcGcd(int a, int b) {
+
+	int	rem;
+
+	if( a < b) {
+		a = a + b;
+		b = a - b;
+		a = a - b;
+	}
+
+	while(rem != 0) {
+		rem = a % b;
+		a = b;
+		b = rem;
+	}
+	
+	return a;
 }

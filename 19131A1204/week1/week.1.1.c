@@ -8,6 +8,5 @@ int main()
 	printf("Hello\rWorld!!!\n");
 	printf("Hello \bWorld!!!\n");
 	printf("\"Hello World!!!\"\n");
-
 	return 0;
 }

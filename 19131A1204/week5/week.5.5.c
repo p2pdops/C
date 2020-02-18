@@ -1,26 +1,25 @@
 #include <stdio.h>
+long fun(int size)
+{
+    long result = 1;
 
+    for(int i = 1 ; i <= size ; i++ ) result = result*i;
+
+    return result;
+}
 int main()
 {
-	int size;
+    int i, j, size;
+    printf("Input the number of rows in Pascal's triangle: ");
+    scanf("%d",&size);
+    for ( i = 0 ; i < size ; i++ )
+    {
+        for ( j = 0 ; j < ( size - i - 1 ) ; j++ )
+            printf(" ");
+        for( j = 0 ; j <= i ; j++ )
+            printf("%ld ",fun(i)/(fun(j)*fun(i-j)));
 
-	printf("Enter your size : ");
-
-	scanf("%d", &size);
-
-	
-	for (int i = size; i > 0; i-- )
-	{
-
-		for(int k = 0; k < size - i; k++ ) printf(" ");
-
-		for(int j = i; j > 0; j-- ) printf("%d ", j);
-
-		printf("\n");
-
-	}
-
-	printf("\n");
-
-	return 0;
+        printf("\n");
+    }
+    return 0;
 }

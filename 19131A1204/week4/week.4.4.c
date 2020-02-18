@@ -3,6 +3,7 @@
 
 int main()
 {
-	// TODO: THATS A TODO (usage of unconditional staements) 
+	// incomplete problem statement (UNCONDITIONAL STATEMENTS)
+	
 	return 0;
 }

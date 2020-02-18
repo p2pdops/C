@@ -2,6 +2,8 @@
 
 int main()
 {
-	int n1,n2, i;
+
+	// incomplete problem statement (retun in functions)
+
 	return 0;
 }

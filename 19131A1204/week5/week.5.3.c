@@ -1,39 +1,41 @@
 #include <stdio.h>
 #include <math.h>
+#include "week.5.3.h"
 
 int main()
 {
-	int num, num_dup, num_const, length, sum;
+	int num;
+	printf("Enter number : ");
+	scanf("%d", &num);
 
-	printf("Enter your number : ");
 
-	scanf("%d", &num_dup);
+	printf("Factorial of %d (using normal function) is %d\n", num, factorial(num));
 
-	num = num_dup;
-	num_const = num_dup;
-	length = 0;
+	printf("Factorial of %d (using recursive function) is %d\n", num, factorial_rec(num));
 
-	while(num_dup != 0)
-	{
-		length += 1;
-		num_dup = num_dup/10;
-	}
-
-	sum = 0;
-	
-	while(num != 0)
-	{
-		sum = sum + pow(num % 10, length); 
-		num = num/10;
-	}
-
-	printf("Sum of digits raised to count of given number is: %d\n", sum);
-
-	(sum == num_const)
-	? printf("The given number is an Armstrong Number.")
-	: printf("The given number is not an Armstrong Number.");
+	prime(num);
 
 	printf("\n");
 
 	return 0;
 }
+
+int prime(int num) {
+	int count = 0;
+	for (int i = 1; i < num + 1; i++) {
+		if (num % i == 0) {
+			count += 1;
+		} 
+	}
+
+	if (count == 2) printf("Prime check: %d is a prime number.\n", num);
+	return (count);
+}
+
+int factorial(int num) {
+	int fac = 1;
+	for(int i = 1; i <= num; i++ ) fac = fac * i ;
+	return fac;
+}
+
+int factorial_rec(int num) { return (num != 0) ? num * factorial_rec(num - 1) : 1; }

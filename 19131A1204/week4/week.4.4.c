@@ -4,6 +4,5 @@
 int main()
 {
 	// incomplete problem statement (UNCONDITIONAL STATEMENTS)
-	
 	return 0;
 }

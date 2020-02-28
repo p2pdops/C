@@ -1,25 +1,22 @@
 #include <stdio.h>
-long fun(int size)
-{
-    long result = 1;
+#include "week.5.4.h"
 
-    for(int i = 1 ; i <= size ; i++ ) result = result*i;
 
-    return result;
-}
-int main()
+void main()
 {
     int i, j, size;
+    
     printf("Enter size of triangle: ");
-    scanf("%d",&size);
-    for ( i = 0 ; i < size ; i++ )
-    {
-        for ( j = 0 ; j < ( size - i - 1 ) ; j++ )
-            printf(" ");
-        for( j = 0 ; j <= i ; j++ )
-            printf("%ld ",fun(i)/(fun(j)*fun(i-j)));
+
+    scanf("%d", &size );
+    
+    for ( i = 0 ; i < size ; i++ ) {
+
+        for ( j = 0 ; j < ( size - i - 1 ) ; j++ )  printf(" ");
+        
+        for( j = 0 ; j <= i ; j++ ) printf("%ld ", ncr(i,j));
 
         printf("\n");
     }
-    return 0;
+
 }

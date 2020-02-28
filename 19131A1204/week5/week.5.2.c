@@ -40,7 +40,7 @@ int calcLcm(int a, int b) {
 	while(1) {
 		if(multiple % a == 0 && multiple % b == 0)
 		 break;
-		multiple++;	
+		multiple++;
 	}
 
 	return multiple;

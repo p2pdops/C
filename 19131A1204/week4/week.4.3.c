@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
+void main()
 {
-	int num, num_dup, num_const, length, sum;
+	int num, power, num_dup, num_const, length, sum, sum_;
 
-	printf("Enter your number : ");
+	printf("Enter your input : ");
 
-	scanf("%d", &num_dup);
+	scanf("%d %d", &num_dup, &power);
 
 	num = num_dup;
 	num_const = num_dup;
@@ -23,17 +23,17 @@ int main()
 	
 	while(num != 0)
 	{
-		sum = sum + pow(num % 10, length); 
-		num = num/10;
+		sum = sum + pow(num % 10, power); 
+		sum_ = sum_ + pow(num % 10, length); 
+		num = num / 10;
 	}
 
-	printf("Sum of digits raised to count of given number is: %d\n", sum);
+	printf("Sum of individual digits raised to power of %d is: %d\n", power, sum);
 
-	(sum == num_const)
-	? printf("The given number is an Armstrong Number.")
-	: printf("The given number is not an Armstrong Number.");
+	(sum_ == num_const)
+	? printf("%d is an Armstrong Number.", num_const)
+	: printf("%d is not an Armstrong Number.", num_const);
 
 	printf("\n");
 
-	return 0;
 }

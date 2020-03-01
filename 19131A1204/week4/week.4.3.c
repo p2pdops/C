@@ -7,7 +7,7 @@ void main()
 
 	printf("Enter your input : ");
 
-	scanf("%d %d", &num_dup, &power);
+	scanf("%d %d", &num, &power);
 
 	num = num_dup;
 	num_const = num_dup;

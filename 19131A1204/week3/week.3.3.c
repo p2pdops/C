@@ -14,22 +14,16 @@ int main()
 
 	if (det == 0) {
 		alpha = beta = -b/(2*a);
-		
-	    printf("Nature of roots are real and equal, roots are %.2f & %.2f", alpha, beta);
+		printf("Nature of roots are real and equal, roots are %.2f & %.2f", alpha, beta);
 	} else if (det > 0) {
 		alpha = (-b + sqrt(det) )/(2*a);
-        beta = (-b - sqrt(det) )/(2*a);
+		beta = (-b - sqrt(det) )/(2*a);
 		printf("Nature of roots are real and distint, roots are %.2f & %.2f", alpha, beta);
+	} else {
+		alpha = (-b)/(2*a);
+		beta = (sqrt(-det))/(2*a);
+		printf("Nature of roots are imaginary and distint, root1 = (%.2f+%.2fi) and root2 = (%.2f-%.2fi)", alpha, beta, alpha, beta);
 	}
-	else {
-
-	alpha = (-b)/(2*a);
-		
-	beta = (sqrt(-det))/(2*a);
-
-	printf("Nature of roots are imaginary and distint, root1 = (%.2f+%.2fi) and root2 = (%.2f-%.2fi)",	alpha,beta, alpha,beta);	
-	
-    }
 	
 	printf("\n");
 	

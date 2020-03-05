@@ -3,13 +3,12 @@
 
 int main()
 {
-
 	float a, b, c, det, alpha , beta;
-
-    printf("Enter a b c: ");
-
-    scanf("%f %f %f", &a, &b, &c);
-
+	
+	printf("Enter a b c: ");
+	
+	scanf("%f %f %f", &a, &b, &c);
+	
 	det = b*b - 4*a*c;
 
 	if (det == 0) {

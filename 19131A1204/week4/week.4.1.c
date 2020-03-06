@@ -10,6 +10,7 @@ int main()
 
 
 	printf("The odd numbers between %d & %d : \n", n1,n2);
+	 
 	for (i= n1; i< n2; i++) 
 	{
 		if(i%2 == 1) printf("%d\n", i);

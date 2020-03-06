@@ -1,32 +1,53 @@
 #include <stdio.h>
-#include <math.h>
 
 void main()
 {
-	int a, b, c;
 
-	scanf("%d %d %d", &a, &b, &c);
+	int n, temp;
 
-	int i = 0;
+	printf("Usage of continue statement : ");
 
-	while(1) {
+	scanf("%d %d", &n, &temp);
 
-		i++;
-
-		if(i == c) goto label1;
+	for(int i = 0; i< n; i++) {
 		
-		if (i == b) continue;
-		
-		if (i == a) break;
+		if (i == temp) continue;
 
 		printf("%d ", i);
 	}
 
 	printf("\n");
 
-	label1 : printf("You r here due to goto : at %d", c);
+	printf("Usage of break statement : ");
+
+	scanf("%d %d", &n, &temp);
+
+	for(int i = 0; i< n; i++) {
+		
+		if (i == temp) break;
+
+		printf("%d ", i);
+	}
 
 	printf("\n");
 
-}
+	printf("Usage of goto statement : ");
 
+	scanf("%d %d", &n, &temp);
+
+	for(int i = 0; i< n; i++) {
+		
+		if (i == temp) goto label;
+
+		printf("%d ", i);
+	}
+
+	printf("\n");
+
+	label : printf("Loop break at %d", temp);
+
+	printf("\n");
+
+
+
+}

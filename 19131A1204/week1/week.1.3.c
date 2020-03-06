@@ -38,19 +38,5 @@ int main()
     printf("The quotient is %d\n", (e * f));
     printf("The modulus is %d\n", (e % f));
 
-
-
-    float g, h;
-
-    printf("Enter float values: ");
-
-    scanf("%f %f", &g, &h);
-
-    printf("The sum is %f\n", (c + d));
-    printf("The difference is %f\n", (c - d));
-    printf("The product is %f\n", (c * d));
-    printf("The quotient is %f\n", (c / d));
-    printf("Modulo operator cannot be applied to floating point numbers\n");
-
     return 0;
 }

@@ -11,14 +11,11 @@ int main()
 
 	int array[size];
 	
-	for(int i = 0; i < size; i++) {
-		scanf("%d", &array[i]);
-	}
+	for(int i = 0; i < size; i++) scanf("%d", &array[i]);
 
 	printf("Your array : [ ");
-	for(int j = 0; j < size; j++) {
-		(j == size - 1) ? printf("%d",array[j]) : printf("%d, ", array[j]);
-	} 
+
+	for(int i = 0; i < size; i++) (i == size - 1) ? printf("%d",array[i]) : printf("%d, ", array[i]);
 
 	printf(" ]");
 

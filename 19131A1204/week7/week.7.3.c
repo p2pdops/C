@@ -11,7 +11,7 @@ int main()
 
 	scanf("%s", &str);
 
-    int length = strlen(str); 
+    	int length = strlen(str); 
 
 
 	for (int i = 0; i < length; i++) if( str[i] == str[(length - 1) - i]) isPalindrome = 1;

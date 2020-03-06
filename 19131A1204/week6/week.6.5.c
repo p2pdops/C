@@ -11,9 +11,7 @@ int main()
 
 	int array[size];
 	
-	for(int i = 0; i < size; i++) {
-		scanf("%d", &array[i]);
-	}
+	for(int i = 0; i < size; i++) scanf("%d", &array[i]);
 
 	int q, index, exist = 0;
 

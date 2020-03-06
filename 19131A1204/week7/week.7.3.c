@@ -6,7 +6,7 @@ int main()
 
 	char str[255];
 
-	int palindrome = 0;
+	int isPalindrome = 0;
 	printf("Enter your string : ");
 
 	scanf("%s", &str);
@@ -14,12 +14,11 @@ int main()
     int length = strlen(str); 
 
 
-	for (int i = 0; i < length; i++) {
-		if( str[i] == str[length - i - 1]) palindrome = 1;
-		else palindrome = 0;
-	}
+	for (int i = 0; i < length; i++) if( str[i] == str[(length - 1) - i]) isPalindrome = 1;
 
-	(palindrome == 1) ? printf("%s is palindrome.",str) : printf("%s is not palindrome.",str);
+	(isPalindrome == 1) ? printf("%s is isPalindrome.",str) : printf("%s is not isPalindrome.",str);
+
 	printf("\n\n");
+	
 	return 0;
 }

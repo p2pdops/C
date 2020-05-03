@@ -3,22 +3,22 @@
 
 int main()
 {
-
+	int isPalindrome = 0;
 	char str[255];
 
-	int isPalindrome = 0;
-	printf("Enter your string : ");
+	scanf("%s", str);
 
-	scanf("%s", &str);
+    int length = strlen(str); 
 
-    	int length = strlen(str); 
+	for (int i = 0; i < length; i++) 
+		if( str[i] == str[(length - 1) - i]) 
+			isPalindrome = 1;
+		else 
+			isPalindrome = 0;
 
-
-	for (int i = 0; i < length; i++) if( str[i] == str[(length - 1) - i]) isPalindrome = 1;
-
-	(isPalindrome == 1) ? printf("%s is isPalindrome.",str) : printf("%s is not isPalindrome.",str);
-
-	printf("\n\n");
+	(isPalindrome == 1) ?
+	printf("Palindrome") : 
+	printf("Not a Palindrome");
 	
 	return 0;
 }

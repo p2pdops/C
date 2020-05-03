@@ -4,23 +4,18 @@ int main()
 {
 
 	char str[255];
+	int i = 0;
+	scanf("%[^\n]s", str);
 
-	printf("Enter your string : ");
+	while(str[i] != '\0') {
 
-	scanf("%s", &str);
+		if (str[i] != 'a' && str[i] != 'e' && str[i] != 'i'  && str[i] != 'o'  && str[i] != 'u'  &&
+			str[i] != 'A' && str[i] != 'E' && str[i] != 'I' && str[i] != 'O' && str[i] != 'U')
+				printf("%c", str[i]);
 
-	for(int i = 0; i < 255; i++) {
-
-		if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' ||
-			str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U')
-			{
-				str[i] = ' ';
-			}
-			
+		i++;
 	}
 
-	printf("Vowels removed => %s", str);
 
-	printf("\n\n");
 	return 0;
 }

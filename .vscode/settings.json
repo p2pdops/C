@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "string.h": "c",
+        "random": "c",
+        "math.h": "c",
+        "dcerpc_server.h": "c",
+        "tuple": "c",
+        "list": "c",
+        "valarray": "c",
+        "cstdio": "c",
+        "*.tcc": "c",
+        "string_view": "c",
+        "functional": "c"
+    }
+}

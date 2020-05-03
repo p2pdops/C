@@ -12,7 +12,7 @@ void main()
 
 	// using lcm = n1*n2/gcd
 
-	int gcd = calcGcd(n1,n2);	
+	int gcd = calcGcd(n1,n2);
 
 	printf("The GCD of %d,%d is %d\n", n1, n2, gcd);
 
